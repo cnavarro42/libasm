@@ -1,0 +1,19 @@
+section .data
+msg db "Hola, Mundo!", 0x0a, 0x0d, '$'
+len equ $-msg
+
+section .text
+    global main
+main:
+
+mov rax, 4
+mov rbx, 1
+mov rcx, msg
+mov rdx, len
+
+int 0x80
+
+mov rax, 1
+mov rbx, 0
+
+int 0x80
