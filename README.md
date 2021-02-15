@@ -10,7 +10,7 @@ Las funciones a realizar en este proyecto serán:
 - ft_strcmp
 - ft_write
 - ft_read
-- ft_strdup
+- ft_strdup 
 
 Partimos con conocimiento cero de ensamblador por lo que primero hay que formarse:
 
@@ -20,4 +20,5 @@ Partimos con conocimiento cero de ensamblador por lo que primero hay que formars
 
 - PDF con mucha documentación: https://www.exabyteinformatica.com/uoc/Informatica/Estructura_de_computadores/Estructura_de_computadores_(Modulo_6).pdf
 
+Ejecutamos el comando para descargar los paquetes y poder compilar en ensamblador:
 brew install nasm
