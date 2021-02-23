@@ -6,30 +6,41 @@
 #    By: cnavarro <cnavarro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/10 10:55:20 by cnavarro          #+#    #+#              #
-#    Updated: 2021/02/10 12:37:57 by cnavarro         ###   ########.fr        #
+#    Updated: 2021/02/23 12:57:30 by cnavarro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		= libasm.a
 
-SRCS		= 
+SRCS		= ./srcs/ft_strlen.s
 
-BONS		= 
+NASM		= nasm
 
-OBJS		= 
+NFLAGS      = -f macho64
 
-GCC			= gcc
-FLAGS		= -Wall -Wextra -Werror -g
+OBJS		= $(SRCS:.s=.o)
+
+GCC			= @gcc
+
+FLAGS		= -Wall -Wextra -Werror #-g
+
+$(NAME):	$(OBJS)
+				@echo "\033[0;31m[Actualizando Biblioteca]"
+				ar rcs $(NAME) $(OBJS)
+				@echo "\033[0m"
+
+%.o: %.s
+	@echo "\033[0;32mGenerando archivos .o"
+	$(NASM) $(NFLAGS) $(SRCS)
+	@echo "\033[0m"
 
 all:		$(NAME)
 
-$(NAME):	$(OBJS)
-				@echo "\033[0;31m[Borrando version anterior...]"
-				@rm -rf libasm
+clean:
+	-@rm -f $(OBJS)
 
 fclean: clean
-	rm -f all
-
-clean: 
-
-re:	fclean
+	@echo "\033[0;31mBorrando biblioteca..."
+	-@rm -f all
+	@echo "\033[0m"
+re:	fclean all

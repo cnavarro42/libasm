@@ -22,3 +22,18 @@ Partimos con conocimiento cero de ensamblador por lo que primero hay que formars
 
 Ejecutamos el comando para descargar los paquetes y poder compilar en ensamblador:
 brew install nasm
+
+- Para conocer las llamadas al systema en macOS:
+
+https://github.com/phracker/MacOSX-SDKs/blob/master/MacOSX10.9.sdk/usr/include/sys/syscall.h
+
+ejemplo:
+"#define	SYS_exit    1" (en doc)
+
+mov rax, 0x02000001 (Escribimos 0x0200000 + el 1 que corresponde a SYS_exit).
+
+- Para compilar un archivo:
+1. Creamos el .o:
+    nasm -f macho64 holamundo.s
+2. Creamos el ejecutable:
+    

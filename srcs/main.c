@@ -1,17 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libasm.h                                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cnavarro <cnavarro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/10 10:55:04 by cnavarro          #+#    #+#             */
-/*   Updated: 2021/02/23 12:53:35 by cnavarro         ###   ########.fr       */
+/*   Created: 2021/02/18 10:37:14 by cnavarro          #+#    #+#             */
+/*   Updated: 2021/02/23 12:55:48 by cnavarro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBASM_H
-# define LIBASM_H
+int	main(void)
+{
+	int		c;
+	char	*frase = {"Hola, que tal"};
 
-int				ft_strlen(const char *str);
-#endif
+	c = ft_strlen(frase);
+	printf("%d", c);
+	return (0);
+}
