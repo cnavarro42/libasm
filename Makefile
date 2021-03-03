@@ -6,13 +6,13 @@
 #    By: cnavarro <cnavarro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/10 10:55:20 by cnavarro          #+#    #+#              #
-#    Updated: 2021/03/03 13:13:45 by cnavarro         ###   ########.fr        #
+#    Updated: 2021/03/03 14:01:03 by cnavarro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME		=	libasm.a
 
-SRCS_ASM	=	ft_strlen.s ft_strcpy.s ft_strcmp.s
+SRCS_ASM	=	ft_strlen.s ft_strcpy.s ft_strcmp.s ft_strdup.s ft_read.s ft_write.s
 
 SRCS		=	$(addprefix srcs/, $(SRCS_ASM))
 

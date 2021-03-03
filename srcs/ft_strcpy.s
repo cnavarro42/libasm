@@ -1,6 +1,6 @@
 section .text
 
-	global _ft_strcpy
+	global _ft_strcpy					; ft_strcpy(rdi, rsi)
 	extern _ft_strlen
 
 _ft_strcpy:

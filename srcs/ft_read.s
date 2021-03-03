@@ -1,5 +1,5 @@
 segment .text
-    global _ft_read
+    global _ft_read             ;ft_read(rdi, rsi, rdx)
 
 _ft_read:
     mov rax, 0x2000003

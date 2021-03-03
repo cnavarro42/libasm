@@ -1,6 +1,6 @@
 section .text
 
-	global _ft_strlen
+	global _ft_strlen			; ft_strlen(rdi)
 
 _ft_strlen:
 

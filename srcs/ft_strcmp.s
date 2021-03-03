@@ -1,6 +1,6 @@
 section .text
 
-	global _ft_strcmp
+	global _ft_strcmp				; ft_strcmp(rdi, rsi)
 	mov rax, 0
 	mov rbx, 0
 
