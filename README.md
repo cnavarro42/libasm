@@ -12,9 +12,7 @@ Las funciones a realizar en este proyecto serán:
 - ft_read
 - ft_strdup 
 
-Partimos con conocimiento cero de ensamblador por lo que primero hay que formarse:
-
-- Playlist para aprender desde cero en Español: https://www.youtube.com/playlist?list=PLZw5VfkTcc8Mzz6HS6-XNxfnEyHdyTlmP
+Recursos:
 
 - Doc de 42: https://harm-smits.github.io/42docs/projects/libasm
 
@@ -30,10 +28,4 @@ https://github.com/phracker/MacOSX-SDKs/blob/master/MacOSX10.9.sdk/usr/include/s
 ejemplo:
 "#define	SYS_exit    1" (en doc)
 
-mov rax, 0x02000001 (Escribimos 0x0200000 + el 1 que corresponde a SYS_exit).
-
-- Para compilar un archivo:
-1. Creamos el .o:
-    nasm -f macho64 holamundo.s
-2. Creamos el ejecutable:
-    
+mov rax, 0x02000001 (Escribimos 0x0200000 + el 1 que corresponde a SYS_exit).    

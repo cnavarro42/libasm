@@ -11,15 +11,15 @@ _ft_strcpy:
 	pop rdi								; recuperamos el valor que teniamos en rdi
 	mov rbx, 0							; contador
 
-this_loop:
+_this_loop:
 	cmp rax, rbx						; comparamos el resultado de strlen con el contador
-	je final							; si son iguales, termina el programa
-	mov BYTE [rdi + rbx], [rsi + rbx]	; copiamos el byte (puntero + contador) de rsi a rdi
-										; esta mal, hay que hacerlo con auxiliar (dl)
+	je _final							; si son iguales, termina el programa
+	mov dl, BYTE [rsi + rbx]			; copiamos el byte (puntero + contador) de rsi a rdi
+	mov BYTE [rdi + rbx], dl			; usando dl como auxiliar
 	inc rbx								; aumentamos el contador
-	jmp this_loop						; repetimos bucle
+	jmp _this_loop						; repetimos bucle
 
-final:
+_final:
 
-	mov rax, rdi						; almacenams el resultado en rax
-	ret									; lo devolvemos
+	mov rax, rdi						; almacenamos el resultado en rax
+	ret									; devolvemos rax
