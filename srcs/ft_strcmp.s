@@ -1,25 +1,26 @@
 section .text
 
 	global _ft_strcmp				; ft_strcmp(rdi, rsi)
-	mov rax, 0
-	mov rbx, 0
 
 _ft_strcmp:
 
-	mov al, BYTE[rsi]
-	mov bl, BYTE[rdi]
+	mov rcx, 0
+
+_loop:
+	mov al, BYTE[rdi + rcx]
+	mov dl, BYTE[rsi + rcx]
 	cmp al, 0
 	je _final
-	cmp bl, 0
+	cmp dl, 0
 	je _final
-	cmp al,bl
+	cmp al,dl
 	jne _final
-	inc rsi
-	inc rdi
-	jmp _ft_strcmp
+	inc rcx
+	jmp _loop
 
 _final:
 
-	sub al, cl
-	movzx rax,al
+	movzx rax, al
+	movzx rdx, dl
+	sub rax, rdx
 	ret

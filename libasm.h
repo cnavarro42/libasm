@@ -6,7 +6,7 @@
 /*   By: cnavarro <cnavarro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/10 10:55:04 by cnavarro          #+#    #+#             */
-/*   Updated: 2021/03/03 13:49:13 by cnavarro         ###   ########.fr       */
+/*   Updated: 2021/03/04 14:15:53 by cnavarro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,12 @@
 # include <fcntl.h>
 # include <stdlib.h>
 # include <stddef.h>
+# include <errno.h>
 
-int				ft_strlen(const char *str);
+size_t			ft_strlen(const char *str);
 char			*ft_strcpy(char *dest, char *src);
 int				ft_strcmp(char *str1, char *str2);
-char			*ft_strdup(char *str1, char *str2);
+char			*ft_strdup(char const *str1);
 ssize_t			ft_read(int fd, void *buf, size_t bytes);
 ssize_t			ft_write(int fd, const void *buf, size_t bytes);
 
