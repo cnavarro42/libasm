@@ -6,7 +6,7 @@
 /*   By: cnavarro <cnavarro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 10:37:14 by cnavarro          #+#    #+#             */
-/*   Updated: 2021/03/04 14:16:08 by cnavarro         ###   ########.fr       */
+/*   Updated: 2021/03/05 12:42:06 by cnavarro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int main(void)
 	char	destino[5];
 
    //STRLEN-------------------------------------------------------------
-	printf(ANSI_COLOR_CYAN "----FT_STRLEN---- \n\n" ANSI_COLOR_RESET);
+	printf(ANSI_COLOR_CYAN "====FT_STRLEN==== \n\n" ANSI_COLOR_RESET);
 	printf(" la cadena es: '%s'\n\n", frase1);
 	printf("   ft_strlen: %lu\n", ft_strlen(frase1));
 	printf("      strlen: %lu\n", strlen(frase1));
@@ -57,7 +57,7 @@ int main(void)
 		printf(ANSI_COLOR_RED "¡¡INCORRECTO!! D:\n\n" ANSI_COLOR_RESET);
 
 	//STRCPY--------------------------------------------------------------
-	printf(ANSI_COLOR_CYAN "----FT_STRCPY---\n" ANSI_COLOR_RESET);
+	printf(ANSI_COLOR_CYAN "====FT_STRCPY===\n" ANSI_COLOR_RESET);
 	printf(" la cadena es: '%s'\n\n", frase1);
 	printf("   ft_strcpy: %s\n", ft_strcpy(destinoft, frase1));
 	printf("      strcpy: %s\n", strcpy(destino, frase1));
@@ -95,7 +95,7 @@ int main(void)
 	printf(ANSI_COLOR_CYAN "-----------------\n" ANSI_COLOR_RESET);
 	
 	//STRCMP-------------------------------------------------------------
-	printf(ANSI_COLOR_CYAN "----FT_STRCMP---\n" ANSI_COLOR_RESET);
+	printf(ANSI_COLOR_CYAN "====FT_STRCMP===\n" ANSI_COLOR_RESET);
 	printf(" las cadenas son: '%s' y '%s'\n\n", frase1, frase2);
 	printf("   ft_strcmp: %d\n", ft_strcmp(frase1, frase2));
 	printf("      strcmp: %d\n", strcmp(frase1, frase2));
@@ -145,7 +145,7 @@ int main(void)
 	char *sinmemoriaft;
 	char *sinmemoria;
 
-	printf(ANSI_COLOR_CYAN "----FT_STRDUP---\n" ANSI_COLOR_RESET);
+	printf(ANSI_COLOR_CYAN "====FT_STRDUP===\n" ANSI_COLOR_RESET);
 	printf("la cadena es:'%s'\n\n", frase1);
 	printf("   ft_strdup: %s\n", sinmemoriaft = ft_strdup(frase1));
 	printf("      strdup: %s\n", sinmemoria = strdup(frase1));
@@ -156,10 +156,6 @@ int main(void)
 		printf(ANSI_COLOR_RED "¡¡INCORRECTO!! D:\n\n" ANSI_COLOR_RESET);
 		printf(ANSI_COLOR_CYAN "-----------------\n" ANSI_COLOR_RESET);
 
-	free(sinmemoriaft);
-	sinmemoriaft = "pepe";
-	free(sinmemoria);
-	sinmemoria = "pepa";
 
 	printf("la cadena es:'%s'\n\n", frasevacia);
 	printf("   ft_strdup2: %s\n", sinmemoriaft = ft_strdup(frasevacia));
@@ -169,7 +165,27 @@ int main(void)
 		printf(ANSI_COLOR_GREEN "\n    CORRECTO :D\n\n" ANSI_COLOR_RESET);
 	else
 		printf(ANSI_COLOR_RED "¡¡INCORRECTO!! D:\n\n" ANSI_COLOR_RESET);
-		printf(ANSI_COLOR_CYAN "-----------------\n" ANSI_COLOR_RESET);
+
+	//FT_WRITE-------------------------------------------------------------
+
+	printf(ANSI_COLOR_CYAN "====FT_STRDUP===\n" ANSI_COLOR_RESET);
+	printf("la cadena es:'%s'\n\n", frase1);
+	printf("   ft_write:  \n");
+	ft_write(1, frase1, 4);
+	printf("\n");
+	printf("     write:  \n");
+	write(1, frase1, 4);
+	printf("\n");
+	printf(ANSI_COLOR_CYAN "-----------------\n" ANSI_COLOR_RESET);
+
+	printf("la cadena es:'%s'\n\n", frasevacia);
+	printf("   ft_write:  \n");
+	ft_write(1, frasevacia, 0);
+	printf("\n");
+	printf("     write:  \n");
+	write(1, frasevacia, 0);
+	printf("\n");
+	printf(ANSI_COLOR_CYAN "-----------------\n" ANSI_COLOR_RESET);
 
 	return (0);
 }

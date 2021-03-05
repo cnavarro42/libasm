@@ -1,6 +1,6 @@
 section .text
 
-    global _ft_strdup                   ; ft_strdup(rdi, rsi)
+    global _ft_strdup                   ; ft_strdup(rdi)
     extern _ft_strlen
     extern _ft_strcpy
     extern _malloc
