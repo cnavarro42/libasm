@@ -28,4 +28,4 @@ https://github.com/phracker/MacOSX-SDKs/blob/master/MacOSX10.9.sdk/usr/include/s
 ejemplo:
 "#define	SYS_exit    1" (en doc)
 
-mov rax, 0x02000001 (Escribimos 0x0200000 + el 1 que corresponde a SYS_exit).    
+mov rax, 0x02000001 (Escribimos 0x0200000 + el 1 que corresponde a SYS_exit)

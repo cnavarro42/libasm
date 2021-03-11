@@ -6,7 +6,7 @@
 /*   By: cnavarro <cnavarro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 10:37:14 by cnavarro          #+#    #+#             */
-/*   Updated: 2021/03/05 12:42:06 by cnavarro         ###   ########.fr       */
+/*   Updated: 2021/03/11 12:55:26 by cnavarro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -168,12 +168,12 @@ int main(void)
 
 	//FT_WRITE-------------------------------------------------------------
 
-	printf(ANSI_COLOR_CYAN "====FT_STRDUP===\n" ANSI_COLOR_RESET);
+	printf(ANSI_COLOR_CYAN "====FT_WRITE===\n" ANSI_COLOR_RESET);
 	printf("la cadena es:'%s'\n\n", frase1);
 	printf("   ft_write:  \n");
 	ft_write(1, frase1, 4);
 	printf("\n");
-	printf("     write:  \n");
+	printf("      write:  \n");
 	write(1, frase1, 4);
 	printf("\n");
 	printf(ANSI_COLOR_CYAN "-----------------\n" ANSI_COLOR_RESET);
@@ -182,10 +182,21 @@ int main(void)
 	printf("   ft_write:  \n");
 	ft_write(1, frasevacia, 0);
 	printf("\n");
-	printf("     write:  \n");
+	printf("      write:  \n");
 	write(1, frasevacia, 0);
 	printf("\n");
 	printf(ANSI_COLOR_CYAN "-----------------\n" ANSI_COLOR_RESET);
 
+	//FT_READ--------------------------------------------------------------
+
+	printf(ANSI_COLOR_CYAN "====FT_WRITE===\n" ANSI_COLOR_RESET);
+	printf("Abrir archivo text.txt\npara comprobar\n\n");
+
+	int fd = open("text.txt", O_RDONLY);
+	char buff[17];
+	int ret = 1;
+	printf("   ft_read:  \n");
+	ret = ft_read(fd, buff, 17);
+	printf("%s", buff);
 	return (0);
 }
